@@ -29,6 +29,7 @@
 #### Tests
 * npm test (runs unit tests)
 * npm run lint (runs linter tests)
-* What assertions need to be / should be made?
+* When handleSave is required in and "spied on" in test, it is expected to be called.
+* When handleError is required in and "spied on" in test, it is expecte to be called.
 
 
