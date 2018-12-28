@@ -6,8 +6,9 @@
 ### Author: Heather Cherewaty
 
 ### Links and Resources
+[![Build Status](https://www.travis-ci.com/hcherewaty/06-event-driven-apps.svg?branch=master)](https://www.travis-ci.com/hcherewaty/06-event-driven-apps)
 * [repo](https://github.com/hcherewaty/06-event-driven-apps)
-* [travis](http://xyz.com)
+* [travis](https://www.travis-ci.com/hcherewaty/06-event-driven-apps)
 
 
 ### Modules
