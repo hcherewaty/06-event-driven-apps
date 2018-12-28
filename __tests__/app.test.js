@@ -1,12 +1,19 @@
 'use strict';
 
-const events = require('./events.js');
-const app = require('./app.js');
-const func = require('./functions.js');
+const events = require('../events.js');
+const app = require('../app.js');
+const log = require('../functions.js');
 
-describe('helper functions', () => {
-  it('it takes in one param', () => {
-    let err = func.handleEror('err');
-    expect(err).toBeTruthy();
+describe('events', () => {
+  it('spys on error console.log', () => {
+    let consoleSpy = jest.spyOn(console, 'error');
+    log.handleError();
+    expect(consoleSpy).toHaveBeenCalled();
+  });
+
+  it('spys on save console.log', () => {
+    let consoleSpy = jest.spyOn(console, 'log');
+    log.handleSave();
+    expect(consoleSpy).toHaveBeenCalled();
   });
 });

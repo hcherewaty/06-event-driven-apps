@@ -13,3 +13,5 @@ function handleError(error) {
 function handleSave(file) {
   console.log(`${file} saved`);
 }
+
+module.exports = {handleError, handleSave};
