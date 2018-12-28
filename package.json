@@ -9,6 +9,8 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "jest": "^23.6.0"
+    "eslint": "^5.11.1",
+    "jest": "^23.6.0",
+    "node": "^11.5.0"
   }
 }
