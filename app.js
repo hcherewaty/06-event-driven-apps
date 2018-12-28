@@ -1,10 +1,11 @@
 'use strict';
 
 const fs = require('fs');
-const EE = require('events');
 const util = require('util');
-const events = new EE();
 const readFile = util.promisify(fs.readFile);
+const events = require('./events.js');
+const func = require('./functions.js');
+
 
 
 const alterFile = (file) => {
@@ -15,19 +16,11 @@ const alterFile = (file) => {
   }).then(text => {
     fs.writeFile( file, text.toString().toUpperCase(), (err, data) => {
       if(err) { throw err; }
-      console.log(`${file} saved`);
+      events.emit('saved', file);
     });
   })
-    .catch(err => events.emit('error', handleError));
+    .catch(err => events.emit('error', err));
 };
-
-function handleError(error) {
-  events.on('error', error);
-}
-
-
-
-
 
 let file = process.argv.slice(2).shift();
 alterFile(file);
