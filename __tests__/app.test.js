@@ -12,7 +12,7 @@ describe('events', () => {
   });
 
   it('spys on save console.log', () => {
-    let consoleSpy = jest.spyOn(console, 'message');
+    let consoleSpy = jest.spyOn(console, 'log');
     log.handleSave();
     expect(consoleSpy).toHaveBeenCalled();
   });
